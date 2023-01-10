@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>otus-mobile</artifactId>
+  <artifactId>mobile</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>otus-mobile</name>
+  <name>mobile</name>
   <url>http://www.example.com</url>
 
   <properties>
@@ -109,7 +109,7 @@
           <threadCountMethods>${thread.count}</threadCountMethods>
 
           <systemPropertyVariables>
-            <app.name>ApiDemos-debug.apk</app.name>>
+            <app.name>app-java-pro-v2.apk</app.name>>
             <browser>${browser}</browser>
             <webdriver.timeouts.implicitlywait>${webdriver.timeouts.implicitlywait}
             </webdriver.timeouts.implicitlywait>
@@ -127,6 +127,21 @@
           <source>1.8</source>
           <target>1.8</target>
           <showDeprecation>true</showDeprecation>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <configLocation>src/test/resources/checkstyle.xml</configLocation>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <configLocation>/checkstyle.xml</configLocation>
         </configuration>
       </plugin>
     </plugins>
